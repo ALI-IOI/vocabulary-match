@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vocabulary Matching Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="header">
+            <h1>🔺 Geometry Vocabulary Match 🔺</h1>
+            <div class="score-board">
+                <div class="score-item">Score: <span id="score">0</span></div>
+                <div class="score-item">Matches: <span id="matches">0</span>/6</div>
+                <div class="score-item">Attempts: <span id="attempts">0</span></div>
+            </div>
+        </div>
+
+        <div class="hint-system">
+            <button class="hint-button" onclick="showHint()">💡 Get Hint</button>
+            <button class="hint-button" onclick="showDefinition()">📖 Show Definition</button>
+            <div class="hint-text" id="hintText"></div>
+        </div>
+
+        <div class="game-area">
+            <div class="column">
+                <h2>📐 Terms</h2>
+                <div class="term-card" data-term="triangle" onclick="selectCard(this)">Triangle</div>
+                <div class="term-card" data-term="rectangle" onclick="selectCard(this)">Rectangle</div>
+                <div class="term-card" data-term="circle" onclick="selectCard(this)">Circle</div>
+                <div class="term-card" data-term="angle" onclick="selectCard(this)">Angle</div>
+                <div class="term-card" data-term="perimeter" onclick="selectCard(this)">Perimeter</div>
+                <div class="term-card" data-term="area" onclick="selectCard(this)">Area</div>
+            </div>
+
+            <div class="column">
+                <h2>📝 Definitions</h2>
+                <div class="definition-card" data-definition="triangle" onclick="selectCard(this)">A polygon with three sides and three angles</div>
+                <div class="definition-card" data-definition="rectangle" onclick="selectCard(this)">A quadrilateral with four right angles and opposite sides equal</div>
+                <div class="definition-card" data-definition="circle" onclick="selectCard(this)">A round shape where all points are the same distance from the center</div>
+                <div class="definition-card" data-definition="angle" onclick="selectCard(this)">The space between two intersecting lines, measured in degrees</div>
+                <div class="definition-card" data-definition="perimeter" onclick="selectCard(this)">The distance around the outside of a shape</div>
+                <div class="definition-card" data-definition="area" onclick="selectCard(this)">The amount of space inside a shape, measured in square units</div>
+            </div>
+        </div>
+
+        <div class="completion-message" id="completionMessage">
+            <h2>🎉 Congratulations! 🎉</h2>
+            <p>You've matched all the geometry terms correctly!</p>
+            <button class="reset-button" onclick="resetGame()">Play Again</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
